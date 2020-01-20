@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>nl.42</groupId>
+    <artifactId>jarb-spring-boot-starter</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>42 Jarb Spring Boot Starter</name>
+    <description>Spring boot start for Jarb</description>
+    <inceptionYear>2020</inceptionYear>
+    <url>https://www.42.nl</url>
+
+    <organization>
+        <name>42 BV</name>
+        <url>https://blog.42.nl</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/42BV/jarb-spring-boot-starter</url>
+        <connection>scm:git:https://github.com/42BV/jarb-spring-boot-starter.git</connection>
+        <developerConnection>scm:git:https://github.com/42BV/jarb-spring-boot-starter.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Geran Stortelers</name>
+            <organization>42</organization>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+        <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
+
+        <jarb.version>5.3.1</jarb.version>
+    </properties>
+
+    <dependencies>
+
+        <!-- Spring Boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+        <!-- 42 -->
+        <dependency>
+            <groupId>nl.42</groupId>
+            <artifactId>jarb</artifactId>
+            <version>${jarb.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

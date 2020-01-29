@@ -4,7 +4,7 @@
 
     <groupId>nl.42</groupId>
     <artifactId>jarb-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>42 Jarb Spring Boot Starter</name>
     <description>Spring boot starter for Jarb</description>
@@ -28,7 +28,7 @@
         <url>https://github.com/42BV/jarb-spring-boot-starter</url>
         <connection>scm:git:https://github.com/42BV/jarb-spring-boot-starter.git</connection>
         <developerConnection>scm:git:https://github.com/42BV/jarb-spring-boot-starter.git</developerConnection>
-        <tag>1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>

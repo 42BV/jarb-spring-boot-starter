@@ -6,14 +6,17 @@ import nl._42.jarb.constraint.metadata.BeanConstraintService;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernatePropertiesCustomizer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 /**
  * Autoconfig for JARB related beans
  */
+@Configuration
 public class JarbAutoConfig {
 
-    private static final String VALIDATION_FACTORY = "javax.persistence.validation.factory";
+    private static final String VALIDATION_FACTORY = "jakarta.persistence.validation.factory";
 
     @Bean
     @ConditionalOnMissingBean(HibernatePropertiesCustomizer.class)
@@ -22,8 +25,10 @@ public class JarbAutoConfig {
     }
 
     @Bean
+    @DependsOn("beanConstraintService")
     @ConditionalOnMissingBean(BeanConstraintController.class)
     public BeanConstraintController beanConstraintController(BeanConstraintService beanConstraintService) {
         return new BeanConstraintController(beanConstraintService);
     }
+
 }
